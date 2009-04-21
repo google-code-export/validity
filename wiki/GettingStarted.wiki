@@ -53,7 +53,7 @@ At this point, the document has everything it needs to make use of _validity_. T
 
 = Validators =
 
-The various validators are covered more extensively in other articles, but for now, let's examine how we are able to configure them to work. We will add a new script element wherein we call the `validity` function on a jQuery object representing a form. Observe:
+The various validators are covered more extensively in other articles, but for now, let's examine how we are able to configure them to work. We will add a new `script` element wherein we call the `validity` function on a jQuery object representing a `form`. Observe:
 
 {{{
 <html>
@@ -88,3 +88,7 @@ The various validators are covered more extensively in other articles, but for n
 </html>
 }}}
 
+The basic procedure of what's happening in this new `script` element is:
+  * We instruct jQuery to execute a function when the DOM has been competed with `$(function() {`. This ensures that the `form` tag will have been loaded by the time we configure the way it will be validated. (`$(function() { /*...*/ });` is a shorter syntax for the older `$(document).ready(function() { /*...*/ });` syntax.)
+  * We selected the `form` on the page with the code `$('form')`.
+  * We call the `validity` method, passing in a function that will contain the meat of our _validity_ configuration.
