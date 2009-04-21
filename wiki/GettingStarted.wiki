@@ -1,0 +1,90 @@
+#summary Quick, simple example of how to get jQuery.validity up and running.
+
+= Requirements =
+
+_Validity_ requires very little setting up to get it running. In order to walk through what we'll need to do we start with a simple HTML document with a basic form.
+
+{{{
+<html>
+  <head>
+    <title>example</title>
+  </head>
+  <body>
+    <form method="get" action="exampple.htm">
+      Enter a number:
+      <input type="text" id="number" name="number" />
+      <br />
+      Also, a date:
+      <input type="text" id="date" name="date" />
+      <br />
+      <input type="submit" />
+    </form>
+  </body>
+</html>
+}}}
+
+As _validity_ is a jQuery plugin we will, of course need to load the core jQuery script. Additionally we import the jquery.validity.js script and a set of CSS styles. _validity_ ships with a template CSS file that has basic styles. In this case, for simplicity's sake, we will merely import that template.
+
+Our document now becomes:
+
+{{{
+<html>
+  <head>
+    <title>example</title>
+    <link type="text/css" rel="Stylesheet" href="jquery.validity.css" />
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery.validity.js"></script>
+  </head>
+  <body>
+    <form method="get" action="exampple.htm">
+      Enter a number:
+      <input type="text" id="number" name="number" />
+      <br />
+      Also, a date:
+      <input type="text" id="date" name="date" />
+      <br />
+      <input type="submit" />
+    </form>
+  </body>
+</html>
+}}}
+
+At this point, the document has everything it needs to make use of _validity_. The only remaining thing to do is configure how the validation is to be performed.
+
+= Validators =
+
+The various validators are covered more extensively in other articles, but for now, let's examine how we are able to configure them to work. We will add a new script element wherein we call the `validity` function on a jQuery object representing a form. Observe:
+
+{{{
+<html>
+  <head>
+    <title>example</title>
+    <link type="text/css" rel="Stylesheet" href="jquery.validity.css" />
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery.validity.js"></script>
+    <script type="text/javascript">
+      $(function() {        // Wire a function to be called when the page is fully loaded: 
+        $("form").validity( // Configure the validation of the form:
+          function() { 
+
+                            // This is where the validator logic will go.
+
+          }
+        );
+      });
+    </script>
+  </head>
+  <body>
+    <form method="get" action="exampple.htm">
+      Enter a number:
+      <input type="text" id="number" name="number" />
+      <br />
+      Also, a date:
+      <input type="text" id="date" name="date" />
+      <br />
+      <input type="submit" />
+    </form>
+  </body>
+</html>
+}}}
+
