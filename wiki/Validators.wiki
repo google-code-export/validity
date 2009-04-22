@@ -32,11 +32,11 @@ $("#ssn").require("Your Social Sequrity Number is required to proceed.");
 
 ===Arguments===
   * `format`: A named pattern to match against. A list of the named formats that are built into `validity` can be found below.
-  * `RegExp`: Instead of a named pattern, you may enter a RegExp object to use for testing the value.
+  * `RegExp`: Instead of a named pattern, you may enter a Regexp object to use for testing the value.
   * `message`: An optional message to display if an element fails.
 
 ===Overview===
-Tests that the inputs conform to the specified format. This is achieved by passing in a RegExp to match the value against. _validity_ also includes several common RegExps that you may use by merely passing in their name as a string. 
+Tests that the inputs conform to the specified format. This is achieved by passing in a Regexp to match the value against. _validity_ also includes several common Regexps that you may use by merely passing in their name as a string. 
 
 The built-in RegExp names are:
   * `'integer'`: Will match only positive, whole numbers.
