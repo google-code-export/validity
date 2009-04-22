@@ -49,3 +49,14 @@ The built-in Regexp names are:
   * `'phone'`: Matches an U.S. Domestic Phone number.
 
 Notably, if an input does not have a value (i.e. if it would have failed a `require`) it will _automatically_ pass the `match`. `match` is effectively (and by design) not a substitute for `require`.
+
+===Examples===
+{{{
+// Make sure that all inputs under the 'date' class are properly formatted.(Given they bear a value.)
+// If any fail, they will be tagged with a default error message associated with the 'date' pattern.
+$('input.date').match('date');
+}}}
+{{{
+// Ensures that an input named 'employeeId' conforms to a special, company-specific pattern, and specifies a helpful message.
+$('#employeeId').match(/^\d{2}[-]\d{4}$/, "Employee Ids must be in the form XX-XXXX.");
+}}}
