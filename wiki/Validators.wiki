@@ -38,7 +38,7 @@ $("#ssn").require("Your Social Sequrity Number is required to proceed.");
 ===Overview===
 Tests that the inputs conform to the specified format. This is achieved by passing in a Regexp to match the value against. _validity_ also includes several common Regexps that you may use by merely passing in their name as a string. 
 
-The built-in RegExp names are:
+The built-in Regexp names are:
   * `'integer'`: Will match only positive, whole numbers.
   * `'date'`: Will only match dates. (Supports all date formats that can be natively parsed by the `Date.parse()` function.)
   * `'email'`: Matches email addresses.
