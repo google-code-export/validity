@@ -32,8 +32,20 @@ $("#ssn").require("Your Social Sequrity Number is required to proceed.");
 
 ===Arguments===
   * `format`: A named pattern to match against. A list of the named formats that are built into `validity` can be found below.
-  * `RegExp`: Instead of a named pattern, you may enter a JavaScript Regular Expression object to use for testing the value.
+  * `RegExp`: Instead of a named pattern, you may enter a RegExp object to use for testing the value.
   * `message`: An optional message to display if an element fails.
 
 ===Overview===
-Tests that the inputs conform to the specified format.
+Tests that the inputs conform to the specified format. This is achieved by passing in a RegExp to match the value against. _validity_ also includes several common RegExps that you may use by merely passing in their name as a string. 
+
+The built-in RegExp names are:
+  * `'integer'`: Will match only positive, whole numbers.
+  * `'date'`: Will only match dates. (Supports all date formats that can be natively parsed by the `Date.parse()` function.)
+  * `'email'`: Matches email addresses.
+  * `'usd'`: Matches U.S. Dollar amounts.
+  * `'url'`: Matches web-addresses.
+  * `'number'`: Matches a number, be it integer or float, positive or negative or in scientific-notation.
+  * `'zip'`: Matches an U.S. Postal Code (in both 5 and 9 digit forms).
+  * `'phone'`: Matches an U.S. Domestic Phone number.
+
+Notably, if an input does not have a value (i.e. if it would have failed a `require`) it will _automatically_ pass the `match`. `match` is effectively (and by design) not a substitute for `require`.
