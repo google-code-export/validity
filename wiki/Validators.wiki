@@ -13,7 +13,9 @@ Now we will explore each of the methods in greater detail.
   * `message`: An optional message to display if an element fails.
 
 ===Overview===
-This is the most basic validation method. It merely checks to ensure that inputs have values. If any do not have a value (i.e. `value.length` is zero) an error is raised for that input and the form will not be submitted.
+This is the most basic validation method. It merely checks to ensure that inputs have values. If any do not have a value (i.e. `value.length` is zero) an error is raised for that input and the form will not be submitted. 
+
+Notably, an input that contains only whitespace will pass this validator. If whitespace should be treated as a non-value a `match` validator can be used.
 
 ===Examples===
 {{{
