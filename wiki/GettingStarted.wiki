@@ -10,7 +10,7 @@ _Validity_ requires very little setting up to get it running. In order to walk t
     <title>example</title>
   </head>
   <body>
-    <form method="get" action="exampple.htm">
+    <form method="get" action="example.htm">
       Enter a number:
       <input type="text" id="number" name="number" />
       <br />
@@ -36,7 +36,7 @@ Our document now becomes:
     <script type="text/javascript" src="jquery.validity.js"></script>
   </head>
   <body>
-    <form method="get" action="exampple.htm">
+    <form method="get" action="example.htm">
       Enter a number:
       <input type="text" id="number" name="number" />
       <br />
@@ -75,7 +75,7 @@ The various validators are covered more extensively in other articles, but for n
     </script>
   </head>
   <body>
-    <form method="get" action="exampple.htm">
+    <form method="get" action="example.htm">
       Enter a number:
       <input type="text" id="number" name="number" />
       <br />
@@ -117,7 +117,7 @@ Without going into any details of the validator's method signatures, here's the 
     </script>
   </head>
   <body>
-    <form method="get" action="exampple.htm">
+    <form method="get" action="example.htm">
       Enter a number:
       <input type="text" id="number" name="number" />
       <br />
