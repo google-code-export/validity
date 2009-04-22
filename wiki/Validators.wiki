@@ -7,8 +7,7 @@ As we've seen in the GettingStarted page, we can call validator methods on jQuer
 Now we will explore each of the methods in greater detail.
 
 = Require =
-====Signature====
-`jQuery.require( ['message'] )` Returns: jQuery
+====Signature: `jQuery.require( ['message'] )` Returns: jQuery====
 
 ===Arguments===
   * `message`: An optional message to display if an element fails.
@@ -29,8 +28,7 @@ $("#ssn").require("Your Social Sequrity Number is required to proceed.");
 }}}
 
 =Match=
-====Signature====
-`jQuery.match( 'patternName'|RegExp, ['message'] )` Returns: jQuery
+====Signature: `jQuery.match( 'patternName'|RegExp, ['message'] )` Returns: jQuery====
 
 ===Arguments===
   * `format`: A named pattern to match against. A list of the named formats that are built into `validity` can be found below.
