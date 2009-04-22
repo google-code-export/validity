@@ -6,11 +6,13 @@ As we've seen in the GettingStarted page, we can call validator methods on jQuer
 
 Now we will explore each of the methods in greater detail.
 
-== .require( [message] ) ==
+= Require =
+==== Signature: `jQuery.require( [message] )` Returns jQuery ====
 
 ===Arguments===
   * `message`: An optional message to display if an element fails.
 
+===Overview===
 This is the most basic validation method. It merely checks to ensure that inputs have values. If any do not have a value (i.e. `value.length` is zero) an error is raised for that input and the form will not be submitted.
 
 ===Examples===
