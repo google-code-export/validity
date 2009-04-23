@@ -93,3 +93,19 @@ Restricts the value to be larger than the specified minimum. This validator assu
 // Validates a cost input, that it must be more than zero.
 $("#cost").match("usd").greaterThan(0, "Cost cannot be zero.");
 }}}
+
+=Greater Than or Equal To=
+====Signature: `jQuery.greaterThanOrEqualTo( min, ['message'] )` Returns: jQuery====
+
+===Arguments===
+  * `min`: The _inclusive_ lower bound for valid values.
+  * `message`: An optional message to display if an element fails.
+
+===Overview===
+Restricts the value to be larger than or equal to the specified minimum. This validator assumes that the value is numeric so it should follow a `match`.
+
+===Examples===
+{{{
+// Validates a velocity input, that it must be more than zero.
+$("#velocity").match("number").greaterThanOrEqualTo(0, "You cannot have negative velocity.");
+}}}
