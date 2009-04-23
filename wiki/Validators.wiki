@@ -61,3 +61,16 @@ $('input.date').match('date');
 // and specifies a helpful message.
 $('#employeeId').match(/^\d{2}[-]\d{4}$/, "Employee Ids must be in the form XX-XXXX.");
 }}}
+
+=Range=
+====Signature: `jQuery.range( min, max, ['message'] )` Returns: jQuery====
+
+===Arguments===
+  * `min`: The _inclusive_ lower bound on the value.
+  * `max`: The _inclusive_ upper bound on the value.
+  * `message`: An optional message to display if an element fails.
+
+===Overview===
+Restricts the value to an _inclusive_ numeric range. This validator assumes that the value is parseable, so a `range` should be called after a `match` that checks the format. If an _exclusive_ range is desired, the `lessThan` and `greaterThan` validators can be used in combination.
+
+===Examples===
