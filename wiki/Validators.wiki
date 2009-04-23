@@ -64,14 +64,32 @@ $('#employeeId').match(/^\d{2}[-]\d{4}$/, "Employee Ids must be in the form XX-X
 ====Signature: `jQuery.range( min, max, ['message'] )` Returns: jQuery====
 
 ===Arguments===
-  * `min`: The _inclusive_ lower bound on the value.
-  * `max`: The _inclusive_ upper bound on the value.
+  * `min`: The _inclusive_ lower bound for valid values.
+  * `max`: The _inclusive_ upper bound for valid values.
   * `message`: An optional message to display if an element fails.
 
 ===Overview===
-Restricts the value to an _inclusive_ numeric range. This validator assumes that the value is parseable, so a `range` should be called after a `match` that checks the format. If an _exclusive_ range is desired, the `lessThan` and `greaterThan` validators can be used in combination instead.
+Restricts the value to an _inclusive_ numeric range. This validator assumes that the value is numeric so it should follow a `match`.
+
+If an _exclusive_ range is needed, the `lessThan` and greaterThan` validators can be used in combination.
 
 ===Examples===
 {{{
 $("#percentage").match(/^\d+\.?\d*%?/, "Must be a percent.").range(0, 100, "Not a valid percent.");
+}}}
+
+=Greater Than=
+====Signature: `jQuery.greaterThan( min, ['message'] )` Returns: jQuery====
+
+===Arguments===
+  * `min`: The _exclusive_ lower bound for valid values.
+  * `message`: An optional message to display if an element fails.
+
+===Overview===
+Restricts the value to be larger than the specified minimum. This validator assumes that the value is numeric so it should follow a `match`.
+
+===Examples===
+{{{
+// Validates a cost input, that it must be more than zero.
+$("#cost").greaterThan(0, "Cost cannot be zero.");
 }}}
