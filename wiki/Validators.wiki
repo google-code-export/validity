@@ -106,6 +106,31 @@ Restricts the value to be larger than or equal to the specified minimum. This va
 
 ===Examples===
 {{{
-// Validates a velocity input, that it must be more than zero.
+// Validates a velocity input, that it must be greater than or equal zero.
 $("#velocity").match("number").greaterThanOrEqualTo(0, "You cannot have negative velocity.");
 }}}
+
+=less Than=
+====Signature: `jQuery.lessThan( max, ['message'] )` Returns: jQuery====
+
+===Arguments===
+  * `max`: The _exclusive_ upper bound for valid values.
+  * `message`: An optional message to display if an element fails.
+
+===Overview===
+Restricts the value to be less than the specified maximum. This validator assumes that the value is numeric so it should follow a `match`.
+
+===Examples===
+
+
+=Less Than or Equal To=
+====Signature: `jQuery.lessThanOrEqualTo( max, ['message'] )` Returns: jQuery====
+
+===Arguments===
+  * `max`: The _inclusive_ upper bound for valid values.
+  * `message`: An optional message to display if an element fails.
+
+===Overview===
+Restricts the value to be less than or equal to the specified minimum. This validator assumes that the value is numeric so it should follow a `match`.
+
+===Examples===
