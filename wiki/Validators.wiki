@@ -57,6 +57,7 @@ Notably, if an input does not have a value (i.e. if it would have failed a `requ
 $('input.date').match('date');
 }}}
 {{{
-// Ensures that an input named 'employeeId' conforms to a special, company-specific pattern, and specifies a helpful message.
+// Ensures that an input named 'employeeId' conforms to a special, company-specific pattern,
+// and specifies a helpful message.
 $('#employeeId').match(/^\d{2}[-]\d{4}$/, "Employee Ids must be in the form XX-XXXX.");
 }}}
