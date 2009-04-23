@@ -91,5 +91,5 @@ Restricts the value to be larger than the specified minimum. This validator assu
 ===Examples===
 {{{
 // Validates a cost input, that it must be more than zero.
-$("#cost").greaterThan(0, "Cost cannot be zero.");
+$("#cost").match("usd").greaterThan(0, "Cost cannot be zero.");
 }}}
