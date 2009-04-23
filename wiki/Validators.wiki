@@ -110,7 +110,7 @@ Restricts the value to be larger than or equal to the specified minimum. This va
 $("#velocity").match("number").greaterThanOrEqualTo(0, "You cannot have negative velocity.");
 }}}
 
-=less Than=
+=Less Than=
 ====Signature: `jQuery.lessThan( max, ['message'] )` Returns: jQuery====
 
 ===Arguments===
