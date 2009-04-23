@@ -1,7 +1,5 @@
 #summary A Summary of validity's validator functions and their usage.
 
-= Introduction =
-
 As we've seen in the GettingStarted page, we can call validator methods on jQuery objects and can also chain those methods in order of importance.
 
 Now we will explore each of the methods in greater detail.
