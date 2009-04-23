@@ -53,7 +53,7 @@ At this point, the document has everything it needs to make use of _validity_. T
 
 = Validators =
 
-The various validators are covered more extensively in other articles, but for now, let's examine how we are able to configure them to work. We will add a new `script` element wherein we call the `validity` function on a jQuery object representing a `form`. Observe:
+The various validators are covered more extensively in Validators, but for now, let's examine how we are able to configure them to work. We will add a new `script` element wherein we call the `validity` function on a jQuery object representing a `form`. Observe:
 
 {{{
 <html>
