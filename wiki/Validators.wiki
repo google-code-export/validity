@@ -121,7 +121,9 @@ $("#velocity").match("number").greaterThanOrEqualTo(0, "You cannot have negative
 Restricts the value to be less than the specified maximum. This validator assumes that the value is numeric so it should follow a `match`.
 
 ===Examples===
-
+{{{
+$("#angle").lessThan(180, "Angle cannot be greater than 180 degrees.");
+}}}
 
 =Less Than or Equal To=
 ====Signature: `jQuery.lessThanOrEqualTo( max, ['message'] )` Returns: jQuery====
@@ -134,3 +136,6 @@ Restricts the value to be less than the specified maximum. This validator assume
 Restricts the value to be less than or equal to the specified maximum. This validator assumes that the value is numeric so it should follow a `match`.
 
 ===Examples===
+{{{
+$("#hoursPerDay").lessThanOrEqualTo(24, "Cannot be more than twenty-four.");
+}}}
