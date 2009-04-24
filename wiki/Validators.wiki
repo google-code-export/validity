@@ -175,7 +175,7 @@ $("text[type='password']").equal("Passwords do not match.");
 {{{
 // We can also extract the important part of a value, 
 // and test the equality only on that.
-// For instance, we might want phone numbers to be equal whether they
+// For instance, we might want phone numbers to be equal disregarding whether they
 // use '.' or '-' to separate groups, or have the area code in parentheses.
 $("input.phone").equal(
     function(val) { 
