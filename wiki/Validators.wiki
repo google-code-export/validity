@@ -139,3 +139,18 @@ Restricts the value to be less than or equal to the specified maximum. This vali
 {{{
 $("#hoursPerDay").lessThanOrEqualTo(24, "Cannot be more than twenty-four.");
 }}}
+
+=Max Length=
+====Signatire: `jQuery.maxLength( max, ['message'] )` Returns: jQuery====
+
+===Arguments===
+  * `max`: The _inclusive_ upper bound for the length of values.
+  * `message`: An optional message to display if an element fails.
+
+===Overview===
+Restricts the length of the value to the specified maximum. This validator is useful to restrict input values to the max-length allowed by a database schema.
+
+===Examples===
+{{{
+$("textarea#description").maxLength(255, "Description cannot be longer than 255 characters.");
+}}}
