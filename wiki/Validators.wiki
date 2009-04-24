@@ -154,3 +154,20 @@ Restricts the length of the value to the specified maximum. This validator is us
 {{{
 $("textarea#description").maxLength(255, "Description cannot be longer than 255 characters.");
 }}}
+
+=Equal=
+====Signature: `jQuery.equal( [transform], ['message'] )` Returns: jQuery====
+
+===Arguments===
+  * `transform`: Optional transform to apply to each value before testing.
+  * `message`: An optional message to display if an element fails.
+
+===Overview===
+Ensure that the values of all matched elements are equal to each other. This is an aggregate validator, meaning that it should be applied to groups of inputs. A common use for the `equal` validator is in password-confirmation scenarios, where a form should not be submitted if a user fails to reenter his or her password correctly.
+
+===Examples===
+{{{
+// Write a jQuery selector that results in both the password and its confirmation,
+// then validate it with 'equal'.
+$("text[type='password']").equal("Passwords do not match.");
+}}}
