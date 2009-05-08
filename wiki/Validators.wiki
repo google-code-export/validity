@@ -217,3 +217,14 @@ $("input.macAddress").distinct(
     "A hardware address was repeated."
 );
 }}}
+
+=Sum=
+====Signature: `jQuery.sum( sum, ['message'] )` Returns: jQuery====
+
+===Arguments===
+  * `sum`: The value that the sum of matched elements should be equal to.
+  * `message`: An optional message to display if an element fails.
+
+===Overview===
+Validate that the numeric sum of the value of all matched elements is equal to a given value. If any value is not parseable as a number it will be ignored. This is an aggregate validator, meaning that it should be applied to groups of inputs.
+
