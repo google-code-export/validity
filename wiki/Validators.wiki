@@ -237,3 +237,21 @@ $("input.triangleAngle")
   .sum(180, "A triangle's angles should add up to 180 degrees.");
 }}}
 
+=Sum Max=
+====Signature: `jQuery.sumMax( max, ['message'] )` Returns: jQuery====
+
+===Arguments===
+  * `max`: The value that the sum of matched elements should be less than or equal to.
+  * `message`: An optional message to display if an element fails.
+
+===Overview===
+The `sumMax` validator works in exactly the same way as `sum` except that values less than the specified max are allowed. This is an aggregate validator, meaning that it should be applied to groups of inputs.
+
+===Examples===
+{{{
+// Find inputs representing the how you intend to distribute 100,000 dollars among
+// several people without having to distribute all of it.
+$("input.distribution")
+  .match("number")
+  .sumMax(100000, "You can't distribute more than you have on hand.");
+}}}
