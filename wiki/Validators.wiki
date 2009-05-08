@@ -184,3 +184,36 @@ $("input.phone").equal(
     "All phone numbers must be the same."
 );
 }}}
+
+=Distinct=
+====Signature: `jQuery.distinct( [transform], ['message'] )` Returns: jQuery====
+
+===Arguments===
+  * `transform`: Optional transform to apply to each value before testing.
+  * `message`: An optional message to display if an element fails.
+
+===Overview===
+Ensure that the values of all matched elements are distinct from each other. In other words, validate that no value is repeated among the matched elements. This is an aggregate validator, meaning that it should be applied to groups of inputs.
+
+If any of the matched elements do not have a value that element will not be tested.
+
+===Examples===
+{{{
+// Find all the inputs meant to hold Vehicle Identification Numbers.
+// Since every VIN should be different, a repeat should be treated as invaid.
+$("input.vin").distinct("A VIN Number was repeated.");
+}}}
+
+{{{
+// We can also use a transform to normalize values.
+// For instance, if we wish to ignore case 
+// (i.e. if "abc" and "ABC" should be treated as a repeat)
+// we can pass in a transform that makes all values upper-case.
+// An example of this might be network interface hardware addresses.
+$("input.macAddress").distinct(
+    function(val) { 
+        return val.toUpperCase();
+    },
+    "A hardware address was repeated."
+);
+}}}
