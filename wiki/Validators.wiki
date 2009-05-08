@@ -228,3 +228,12 @@ $("input.macAddress").distinct(
 ===Overview===
 Validate that the numeric sum of the value of all matched elements is equal to a given value. If any value is not parseable as a number it will be ignored. This is an aggregate validator, meaning that it should be applied to groups of inputs.
 
+===Examples===
+{{{
+// Find inputs representing the three interior angles of a triangle.
+$("input.triangleAngle")
+  .require()
+  .match("number")
+  .sum(180, "A triangle's angles should add up to 180 degrees.");
+}}}
+
