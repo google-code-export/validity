@@ -255,3 +255,55 @@ $("input.distribution")
   .match("number")
   .sumMax(100000, "You can't distribute more than you have on hand.");
 }}}
+
+=Assert=
+====Signature: `jQuery.assert( expression, ['message'] )` Returns: jQuery====
+
+===Arguments===
+  * `expression`: A boolean value, where true means valid.
+  * `message`: An optional message to display if an element fails.
+
+===Overview===
+The `assert` validator method gives you lower-level control over validation. Essentially, it allows you to write the logic of the validation, but allow validity to handle the error message and stopping form submission.
+
+This allows you to do virtually any type of validation that isn't covered in the built-in methods, as well as easily extend validity.
+
+===Examples===
+{{{
+// Validate based on an existing JavaScript function.
+$("#productKey").assert(
+  specialSecretProductKeyCheckerFunction($("#productKey").val()),
+  "The product key is invalid."
+);
+}}}
+
+{{{
+// Validate based on an Ajax result:
+// First define a function that uses a Sychronous Ajax request with Json:
+function usernameIsAvailable(username) {
+  var isAvailable = false;
+  $.ajax({
+    url:"/some/url", 
+    method:"get",
+    async:false,
+    success:function(data) { isAvailable = eval('('+data+')'); }
+  });
+  return isAvailable;
+}
+
+// Elsewhere, in the validation function, we can take advantage of this
+// function to ensure that a username hasn't been taken already.
+$("#username").assert(
+  usernameIsAvailable($("#username").val()), 
+  "Sorry, that username has already been taken.");
+}}}
+
+{{{
+// Arbitrarily stop validation:
+$("input").assert(false, "You will never be able to submit this form.");
+}}}
+
+{{{
+// Confirm submittal of form:
+$("input").assert(confirm("Have you read the agreement terms?"), "User cancelled.");
+}}}
