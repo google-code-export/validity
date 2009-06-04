@@ -78,7 +78,7 @@ If an _exclusive_ range is needed, the `lessThan` and greaterThan` validators ca
 $("#percentage").match(/^\d+\.?\d*%?/, "Must be a percent.").range(0, 100, "Not a valid percent.");
 }}}
 
-=Greater Than=
+=GreaterThan=
 ====Signature: `jQuery.greaterThan( min, ['message'] )` Returns: jQuery====
 
 ===Arguments===
@@ -94,7 +94,7 @@ Restricts the value to be larger than the specified minimum. This validator assu
 $("#cost").match("usd").greaterThan(0, "Cost cannot be zero.");
 }}}
 
-=Greater Than or Equal To=
+=GreaterThanOrEqualTo=
 ====Signature: `jQuery.greaterThanOrEqualTo( min, ['message'] )` Returns: jQuery====
 
 ===Arguments===
@@ -125,7 +125,7 @@ Restricts the value to be less than the specified maximum. This validator assume
 $("#angle").lessThan(180, "Angle cannot be greater than 180 degrees.");
 }}}
 
-=Less Than or Equal To=
+=LessThanOrEqualTo=
 ====Signature: `jQuery.lessThanOrEqualTo( max, ['message'] )` Returns: jQuery====
 
 ===Arguments===
@@ -140,7 +140,7 @@ Restricts the value to be less than or equal to the specified maximum. This vali
 $("#hoursPerDay").lessThanOrEqualTo(24, "Cannot be more than twenty-four.");
 }}}
 
-=Max Length=
+=MaxLength=
 ====Signatire: `jQuery.maxLength( max, ['message'] )` Returns: jQuery====
 
 ===Arguments===
@@ -237,7 +237,7 @@ $("input.triangleAngle")
   .sum(180, "A triangle's angles should add up to 180 degrees.");
 }}}
 
-=Sum Max=
+=SumMax=
 ====Signature: `jQuery.sumMax( max, ['message'] )` Returns: jQuery====
 
 ===Arguments===
