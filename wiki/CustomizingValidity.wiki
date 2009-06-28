@@ -90,16 +90,16 @@ Writing an output mode is actually relatively simple. Below are the basic steps 
     },
       
     end:function(){ 
-      alert(buffer.join("\\n"));
+      alert(buffer.join("\n"));
       buffer = [];
     },
     
     raise:function($obj, msg){
-        buffer.pump(msg);
+        buffer.push(msg);
     },
     
     raiseAggregate:function($obj, msg){ 
-        buffer.pump(msg);
+        buffer.push(msg);
     },
   };
 })();
