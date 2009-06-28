@@ -1,3 +1,5 @@
+#Summary of how to customize validity.
+
 = Philosophy =
 Validity was conceived with two main goals in mind:
 
