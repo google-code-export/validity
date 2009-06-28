@@ -90,7 +90,7 @@ Writing an output mode is actually relatively simple. Below are the basic steps 
     },
       
     end:function(){ 
-      alert(buffer);
+      alert(buffer.join());
       buffer = [];
     },
     
