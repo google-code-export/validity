@@ -32,11 +32,13 @@ Applied to the 'ul' element (within the '#validity-summary-container' element) t
 == Authoring an Output Mode ==
 Writing an output mode is actually relatively simple. Below are the basic steps for accomplishing this:
 
-  #First of all you choose a name for your output mode and assign a new object to the jQuery.validity.outputs object. For example, below we create a new output mode with the name 'example':
+  #First of all you choose a name for your output mode and assign a new object to the jQuery.validity.outputs object within a JavaScript closure. For example, below we create a new output mode with the name 'example':
 {{{
-jQuery.validity.outputs.example = {
+(function(){
+  jQuery.validity.outputs.example = {
 
-};
+  };
+})();
 }}}
 
-  #
+  #Secondly, you create methods 
