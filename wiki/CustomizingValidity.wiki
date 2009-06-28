@@ -78,7 +78,9 @@ Writing an output mode is actually relatively simple. Below are the basic steps 
   };
 })();
 }}}
-  # Lastly fill out the method bodies. Because this definition is in a closure you may specify local variables that are internally accessible to any of the methods. For example, the following is an output mode that will display a summary of errors in an 'alert' message-box.
+  # Lastly fill out the method bodies. Because this definition is in a closure you may specify local variables that are internally accessible to any of the methods. For example, the following is an output mode that will display a summary of errors in an 'alert' message-box. It uses a 'buffer' local variable to store the messages. The closure-scope ensures that this variable will not conflict with anything and is not externally accessible.
+
+Also notice that the 'scrollToFirstError' method is omitted. Since it does not make sense for this output mode and is optional this is fine.
 {{{
 (function(){
   // This is a buffer that will contain the accumulated error messages throughout a validation session.
@@ -110,4 +112,8 @@ Writing an output mode is actually relatively simple. Below are the basic steps 
     },
   };
 })();
+}}}
+  # Lastly, after the installation code has been executed you'll want to activate it with the setup method the same way as for the built-in modes. For example:
+{{{
+jQuery.validity.setup({ outputMode:'alertSummary' });
 }}}
