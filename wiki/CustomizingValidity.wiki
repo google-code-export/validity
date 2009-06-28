@@ -9,6 +9,8 @@ The first goal is accomplished by the core of the validity codebase: the validat
 First of all, you are encouraged to modify the CSS template that ships with validity, you can also select from any of the three built-in output modes: 'label', 'modal' and 'summary'. Furthermore, if these options are insuffiucient for you to customize the error messages, you can write your own output mode as a plugin to validity.
 
 == Editing the CSS ==
+When you use validity, you are encouraged to copy the relevant styles from the packaged CSS file and tailor the included styles to your site. Below are summarized the roles of the different styles.
+
 === Styles used in the 'label' output mode ===
 ==== 'label.error' ====
 Applied to HTML label elements under the 'error' class. These elements are placed immediately after an offending input.
