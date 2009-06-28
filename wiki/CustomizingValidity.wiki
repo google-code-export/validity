@@ -6,7 +6,7 @@ Validity was conceived with two main goals in mind:
 
 The first goal is accomplished by the core of the validity codebase: the validation logic, which is capable of naturally handling complex validation scenarios and halting form submission. However, the system of error messages built on top of that foundation offers you complete customizability.
 
-First of all, you are encouraged to modify the CSS template that ships with validity, you can also select from any of the three built-in output modes: 'label', 'modal' and 'summary'. Furthermore, if these options are insuffiucient for you to customize the error messages, you can write your own output mode as a plugin to validity.
+First of all, you are encouraged to modify the CSS template that ships with validity, you can also select from any of the three built-in output modes: 'label', 'modal' and 'summary'. Furthermore, if these options are insuffiucient for you to customize the the look and feel, you can even write your own output mode as a plugin to validity.
 
 == Editing the CSS ==
 When you use validity, you are encouraged to copy the relevant styles from the packaged CSS file and tailor the included styles to your site. Below are summarized the roles of the different styles.
@@ -23,3 +23,11 @@ Applied to the modal error messages that are positioned near offending inputs. T
 Applied to modal error messages when the cursor hover over them. The style should change to indicate to the user that it can be clicked on (only meaningful if the 'modalErrorsClickable' property is set to true).
 
 === Styles used in the 'summary' output mode ===
+==== '#validity-summary-container' ====
+Applied to the element that contains the actual summary (which should be a 'ul'). This style should contain a 'display:none;' assignment. It might also specify a border for the summary.
+
+==== '#validity-summary-output' ====
+Applied to the 'ul' element (within the '#validity-summary-container' element) that will contain the validation messages.
+
+== Authoring an Output Mode ==
+Writing an output mode is actually relatively simple. 
