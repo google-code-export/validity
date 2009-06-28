@@ -14,3 +14,10 @@ First of all, you are encouraged to modify the CSS template that ships with vali
 Applied to HTML label elements under the 'error' class. These elements are placed immediately after an offending input.
 
 === Styles used in the 'modal' output mode ===
+==== '.validity-modal-msg' ====
+Applied to the modal error messages that are positioned near offending inputs. This style should contain the 'position:absolute;' assignment in order for it to be positioned correctly.
+
+==== '.validity-modal-msg:hover' ====
+Applied to modal error messages when the cursor hover over them. The style should change to indicate to the user that it can be clicked on (only meaningful if the 'modalErrorsClickable' property is set to true).
+
+=== Styles used in the 'summary' output mode ===
