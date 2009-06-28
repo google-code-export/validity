@@ -45,39 +45,37 @@ Writing an output mode is actually relatively simple. Below are the basic steps 
 {{{
 (function(){
   jQuery.validity.outputs.example = {
+    // The start function is called whenever validation begins.
+    // Usually, it should clear out any error messages that are on the page.
+    start:function(){ 
+
+    },
+      
+    // The end function is called when validation concludes.
+    // This may be used to flush any buffers that were built up during validation.
+    end:function(){ 
+
+    },
     
+    // The raise function is called for raising an error message on a single input.
+    // '$obj' is a jQuery object representing the input for which the error should be raised.
+    // 'msg' is a string of the message to raise.
+    raise:function($obj, msg){
+        
+    },
     
-            // The start function is called whenever validation begins.
-            // Usually, it should clear out any error messages that are on the page.
-            start:function(){ 
+    // The raise function is called for raising an error message on a multiple inputs.
+    // '$obj' is a jQuery array representing the inputs for which the error should be raised.
+    // 'msg' is a string of the message to raise.
+    raiseAggregate:function($obj, msg){ 
+        
+    },
     
-            },
-              
-            // The end function is called when validation concludes.
-            // This may be used to flush any buffers that were built up during validation.
-            end:function(){ 
-    
-            },
-            
-            // The raise function is called for raising an error message on a single input.
-            // '$obj' is a jQuery object representing the input for which the error should be raised.
-            // 'msg' is a string of the message to raise.
-            raise:function($obj, msg){
-                
-            },
-            
-            // The raise function is called for raising an error message on a multiple inputs.
-            // '$obj' is a jQuery array representing the inputs for which the error should be raised.
-            // 'msg' is a string of the message to raise.
-            raiseAggregate:function($obj, msg){ 
-                
-            },
-            
-            // The scrollToFirstError function is called to cause the page to move to the first error message.
-            // This function is only called at the end of validation and only if the 'scrollTo' option is set to true.
-            scrollToFirstError:function(){ 
-    
-            }
-       };
+    // The scrollToFirstError function is called to cause the page to move to the first error message.
+    // This function is only called at the end of validation and only if the 'scrollTo' option is set to true.
+    scrollToFirstError:function(){ 
+
+    }
+  };
 })();
 }}}
