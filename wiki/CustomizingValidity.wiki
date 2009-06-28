@@ -81,25 +81,32 @@ Writing an output mode is actually relatively simple. Below are the basic steps 
   # Lastly fill out the method bodies. Because this definition is in a closure you may specify local variables that are internally accessible to any of the methods. For example, the following is an output mode that will display a summary of errors in an 'alert' message-box.
 {{{
 (function(){
+  // This is a buffer that will contain the accumulated error messages throughout a validation session.
   var buffer = [];
 
   jQuery.validity.outputs.alertSummary = {
-    
+
     start:function(){ 
+      // Starting validation: empty the buffer.
       buffer = [];
     },
-      
+    
     end:function(){ 
-      alert(buffer.join("\n"));
+      // Validation has finished. If there are errors, display them.
+      if (buffer.length)
+        alert(buffer.join("\n"));
+      // And empty the buffer for good measure.
       buffer = [];
     },
     
     raise:function($obj, msg){
-        buffer.push(msg);
+      // Add this to the buffer.
+      buffer.push(msg);
     },
     
     raiseAggregate:function($obj, msg){ 
-        buffer.push(msg);
+      // Add this to the buffer.
+      buffer.push(msg);
     },
   };
 })();
