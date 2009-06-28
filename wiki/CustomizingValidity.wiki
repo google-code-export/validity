@@ -1,0 +1,13 @@
+#Summary of how to customize validity.
+
+= Philosophy =
+Validity was conceived with two main goals in mind:
+
+  # Unobtrusive: Little to no markup requirements, easily setup
+  # Customizable: Does not lock you into a look and feel, you get full control over how errors should show up.
+
+The first goal is accomplished by the core of the validity codebase: the validation logic, which is capable of naturally handling complex validation scenarios and halting form submission. However, the system of error messages built on top of that foundation offers you complete customizability.
+
+First of all, you are encouraged to modify the CSS template that ships with validity, you can also select from any of the three built-in output modes: 'label', 'modal' and 'summary'. Furthermore, if these options are insuffiucient for you to customize the error messages, you can write your own output mode as a plugin to validity.
+
+= Editing the CSS = 
